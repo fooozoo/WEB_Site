@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App with Encryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1>Web App with Encryption</h1>
+    </nav>
+    <div id="authPage" class="container">
+        <h2>Authorization</h2>
+        <form id="authForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <button id="registerButton">Register</button></p>
+    </div>
+
+    <div id="registerPage" class="container hidden">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" required><br><br>
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <button id="backToLogin">Back to Login</button>
+    </div>
+
+    <div id="adminPage" class="container hidden">
+    <h2>Admin Panel</h2>
+    <button id="toggleEncryption">Show Encrypted Data</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody id="usersTable">
+        </tbody>
+    </table>
+    <button id="backToLoginFromAdmin">Back to Login</button>
+	</div>
+
+    <div id="userPage" class="container hidden">
+        <h2>Симетричне шифрування</h2>
+        <p>
+            Симетричне шифрування – це тип шифрування, у якому той самий ключ використовується для шифрування та дешифрування даних. Він швидкий і ефективний для шифрування великих обсягів даних, але проблема полягає в безпечному обміні ключем між відправником і одержувачем.
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
